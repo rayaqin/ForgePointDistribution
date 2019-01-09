@@ -20,5 +20,5 @@ A model a Forge of Empires játék egy gyakori problémáját hivatott megoldani
 <ol>
 <li>Hány FP van a raktárában</li>
 <li>Milyen szorzót biztosít az Arc-ja</li>
-
-Maximalizálandó az FP, BP és Medál jutalmakból származó <b>profit</b> <i>(állítható ezek egymáshoz viszonyított prioritása)<\i>.
+<br>
+<p>Maximalizálandó az FP, BP és Medál jutalmakból származó <b>profit</b> <i>(állítható ezek egymáshoz viszonyított prioritása)<\i>.</p>
