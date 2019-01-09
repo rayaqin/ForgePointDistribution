@@ -7,7 +7,7 @@ A model a Forge of Empires játék egy gyakori problémáját hivatott megoldani
 
 <h4>Egy GB-hez az alábbi adatok tartoznak:</h4>
 <i>(több GB is megadható, ez esetben a model elosztja a játékos FP-it optimálisan a GB-k között)</i>
-<br/>
+<br></br>
 <ol>
 <li>Hány FP szükséges a következő szint eléréséhez. </li>
 <li>Hány FP-t, Blueprintet <i>(BP)</i>, Medált adnak az egyes pozíciók </li>
@@ -20,6 +20,6 @@ A model a Forge of Empires játék egy gyakori problémáját hivatott megoldani
 <ol>
 <li>Hány FP van a raktárában</li>
 <li>Milyen szorzót biztosít az Arc-ja</li>
-<br>
+<br></br>
 </ol>
 <p>Maximalizálandó az FP, BP és Medál jutalmakból származó <b>profit</b> <i>(állítható ezek egymáshoz viszonyított prioritása)</i>.</p>
