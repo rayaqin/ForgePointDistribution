@@ -1,23 +1,23 @@
 Problem:    simpleforge
-Rows:       7
-Columns:    9 (9 integer, 5 binary)
-Non-zeros:  37
+Rows:       6
+Columns:    6 (6 integer, 5 binary)
+Non-zeros:  25
 Status:     INTEGER OPTIMAL
-Objective:  Profit = 205 (MAXimum)
+Objective:  Profit = 1805 (MAXimum)
 
    No.   Row name        Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
      1 OneTargetedPositionPerGB
                                    1                           1 
      2 PointsToContributeCantExceedStoredFp
-                                  65                        5000 
-     3 SetPointsToContribute
-                                   0            -0               
-     4 SetFPsGained                0            -0             = 
-     5 SetBPsGained                0            -0             = 
-     6 SetMedalsGained
+                                 125                         500 
+     3 MakeItWorthIt
+                                 -25                          -0 
+     4 RemainingContribution
+                                 125                         175 
+     5 SetPointsToContribute
                                    0            -0             = 
-     7 Profit                    205                             
+     6 Profit                   1805                             
 
    No. Column name       Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
@@ -32,10 +32,7 @@ Objective:  Profit = 205 (MAXimum)
      5 TargetedPosition[5]
                     *              0             0             1 
      6 PointsToContribute
-                    *             65             0               
-     7 FPsGained    *            205             0               
-     8 BPsGained    *             18             0               
-     9 MedalsGained *            810             0               
+                    *            125             0               
 
 Integer feasibility conditions:
 
