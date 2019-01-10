@@ -1,0 +1,47 @@
+param FPReward :=
+	1	150
+	2	100
+	3	10
+	4	3
+	5	200
+;
+
+param BPReward :=
+	1	10
+	2	7
+	3	5
+	4	4000
+	5	1
+;
+
+param MedalReward :=
+	1	450
+	2	300
+	3	150
+	4	70
+	5	15
+;
+
+param storedFP := 5000;
+
+param arcBoost := 1.8;
+
+param TotalFPsNeededForNextLevel := 300;
+
+param ContributedByOthersPerPos :=
+	1	80
+	2	80
+	3	80
+	4	2
+	5	1
+;
+
+param AllPointsAlreadyContributed := 250;
+
+param FPPriority := 5;
+param BPPriority := 8;
+param MedalPriority := 1;
+
+param M := 1000000;
+
+end;

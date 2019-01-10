@@ -22,21 +22,23 @@ var ShouldContribute{GBs}, binary;
 var PointsToContribute{GBs} >= 0;
 
 
-
-s.t. OneTargetedPositionPerGBAndNoTargetedPositionMeansNoContribution{gb in GBs}:
-    sum{p in Positions} TargetedPosition[gb,p] <= 1;
+s.t. OneTargetedPositionPerGB{gb in GBs}:
+    sum{p in Positions} TargetedPosition[gb,p] <= ShouldContribute[gb];
 
 s.t. PointsToContributeCantExceedStoredFp:
     sum{gb in GBs} (PointsToContribute[gb]) <= storedFP;
 
-#s.t. PointsContributedShouldExceedTargetedPositionIfGreaterThanZero{gb in GBs}:
-#    (PointsToContribute[gb]) >= ( sum{p in Positions} ( (ContributedByOthersPerPos[gb,p] + 1) * TargetedPosition[gb,p]) );
+s.t. PointsContributedShouldNotExceedFPReward{gb in GBs,p in Positions}:
+	PointsToContribute[gb]<=FPReward[gb,p] + M * (1-TargetedPosition[gb,p]);
 
-s.t. SetPointsToContribute{gb in GBs}
-	PointsToContribute[gb] = sum{p in Positions} ((ContributedByOthersPerPos[gb,p] + 1) * TargetedPosition[gb,p]) + ( TotalFPsNeededForNextLevel[gb] - AllPointsAlreadyContributed[gb] - sum{p in Positions} ((ContributedByOthersPerPos[gb,p] + 1) * TargetedPosition[gb,p])) / 2;
+s.t. PointsContributedShouldExceedPointsAlreadyInTargetedPositionIfGreaterThanZero{gb in GBs}:
+    (PointsToContribute[gb]) >= ( sum{p in Positions} ( (ContributedByOthersPerPos[gb,p]) * TargetedPosition[gb,p]) );
 
-s.t. ShouldOnlyContributeIfPositionIsSecured{gb in GBs}:
-    (PointsToContribute[gb]) >= sum{p in Positions} ((ContributedByOthersPerPos[gb,p]) * TargetedPosition[gb,p]) + (TotalFPsNeededForNextLevel[gb] - AllPointsAlreadyContributed[gb]) - PointsToContribute[gb];
+s.t. SetPointsToContribute{gb in GBs}:
+    PointsToContribute[gb] = sum{p in Positions} ((ContributedByOthersPerPos[gb,p]) * TargetedPosition[gb,p])+(TotalFPsNeededForNextLevel[gb] - AllPointsAlreadyContributed[gb]-sum{p in Positions} ((ContributedByOthersPerPos[gb,p]) * TargetedPosition[gb,p]))/2;
 
 maximize Profit:
-    sum{gb in GBs, p in Positions} (TargetedPosition[gb,p] * (FPReward[gb,p] + BPReward[gb,p] + MedalReward[gb,p])) - sum{gb in GBs} (PointsToContribute[gb]);
+    sum{gb in GBs, p in Positions} TargetedPosition[gb,p] * FPReward[gb,p] - sum{gb in GBs} PointsToContribute[gb];
+
+
+end;
