@@ -1,0 +1,143 @@
+Problem:    forge
+Rows:       33
+Columns:    27 (18 integer, 18 binary)
+Non-zeros:  116
+Status:     INTEGER OPTIMAL
+Objective:  Profit = 16764.85 (MAXimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 SetPointsNeededUntilNextLvl[1]
+                                 426           426             = 
+     2 SetPointsNeededUntilNextLvl[2]
+                                 109           109             = 
+     3 SetPointsNeededUntilNextLvl[3]
+                                 128           128             = 
+     4 SetPointsAlreadyIn[1]
+                                   0            -0             = 
+     5 SetPointsAlreadyIn[2]
+                                   0            -0             = 
+     6 SetPointsAlreadyIn[3]
+                                   0            -0             = 
+     7 MaxOneTargetedPositionCanBePerOneGB[1]
+                                   1                           1 
+     8 MaxOneTargetedPositionCanBePerOneGB[2]
+                                   1                           1 
+     9 MaxOneTargetedPositionCanBePerOneGB[3]
+                                   1                           1 
+    10 IfShouldContributeIsZeroTargetedPositionIsZero[1,1]
+                                   0                          -0 
+    11 IfShouldContributeIsZeroTargetedPositionIsZero[1,2]
+                                  -1                          -0 
+    12 IfShouldContributeIsZeroTargetedPositionIsZero[1,3]
+                                  -1                          -0 
+    13 IfShouldContributeIsZeroTargetedPositionIsZero[1,4]
+                                  -1                          -0 
+    14 IfShouldContributeIsZeroTargetedPositionIsZero[1,5]
+                                  -1                          -0 
+    15 IfShouldContributeIsZeroTargetedPositionIsZero[2,1]
+                                   0                          -0 
+    16 IfShouldContributeIsZeroTargetedPositionIsZero[2,2]
+                                  -1                          -0 
+    17 IfShouldContributeIsZeroTargetedPositionIsZero[2,3]
+                                  -1                          -0 
+    18 IfShouldContributeIsZeroTargetedPositionIsZero[2,4]
+                                  -1                          -0 
+    19 IfShouldContributeIsZeroTargetedPositionIsZero[2,5]
+                                  -1                          -0 
+    20 IfShouldContributeIsZeroTargetedPositionIsZero[3,1]
+                                  -1                          -0 
+    21 IfShouldContributeIsZeroTargetedPositionIsZero[3,2]
+                                   0                          -0 
+    22 IfShouldContributeIsZeroTargetedPositionIsZero[3,3]
+                                  -1                          -0 
+    23 IfShouldContributeIsZeroTargetedPositionIsZero[3,4]
+                                  -1                          -0 
+    24 IfShouldContributeIsZeroTargetedPositionIsZero[3,5]
+                                  -1                          -0 
+    25 SetPointsToContributeIfShouldContributeIsOne[1]
+                              -1e+06        -1e+06               
+    26 SetPointsToContributeIfShouldContributeIsOne[2]
+                              -1e+06        -1e+06               
+    27 SetPointsToContributeIfShouldContributeIsOne[3]
+                              -1e+06        -1e+06               
+    28 PointsToContributeShouldBeLessThanPointsNeededUntilNextLvl[1]
+                              -127.5                          -1 
+    29 PointsToContributeShouldBeLessThanPointsNeededUntilNextLvl[2]
+                               -37.5                          -1 
+    30 PointsToContributeShouldBeLessThanPointsNeededUntilNextLvl[3]
+                               -49.5                          -1 
+    31 ShouldBeBeneficialSoMakeProfitBeOverZero
+                               149.9            -0               
+    32 PointsContributedCantExceedStoredFP
+                               448.5                        1500 
+    33 Profit                16764.8                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 TargetedPosition[1,1]
+                    *              1             0             1 
+     2 TargetedPosition[1,2]
+                    *              0             0             1 
+     3 TargetedPosition[1,3]
+                    *              0             0             1 
+     4 TargetedPosition[1,4]
+                    *              0             0             1 
+     5 TargetedPosition[1,5]
+                    *              0             0             1 
+     6 TargetedPosition[2,1]
+                    *              1             0             1 
+     7 TargetedPosition[2,2]
+                    *              0             0             1 
+     8 TargetedPosition[2,3]
+                    *              0             0             1 
+     9 TargetedPosition[2,4]
+                    *              0             0             1 
+    10 TargetedPosition[2,5]
+                    *              0             0             1 
+    11 TargetedPosition[3,1]
+                    *              0             0             1 
+    12 TargetedPosition[3,2]
+                    *              1             0             1 
+    13 TargetedPosition[3,3]
+                    *              0             0             1 
+    14 TargetedPosition[3,4]
+                    *              0             0             1 
+    15 TargetedPosition[3,5]
+                    *              0             0             1 
+    16 ShouldContribute[1]
+                    *              1             0             1 
+    17 ShouldContribute[2]
+                    *              1             0             1 
+    18 ShouldContribute[3]
+                    *              1             0             1 
+    19 PointsToContribute[1]
+                               298.5             0               
+    20 PointsToContribute[2]
+                                71.5             0               
+    21 PointsToContribute[3]
+                                78.5             0               
+    22 PointsAlreadyIn[1]
+                                 171             0               
+    23 PointsAlreadyIn[2]
+                                  34             0               
+    24 PointsAlreadyIn[3]
+                                  29             0               
+    25 PointsNeededUntilNextLvl[1]
+                                 426             0               
+    26 PointsNeededUntilNextLvl[2]
+                                 109             0               
+    27 PointsNeededUntilNextLvl[3]
+                                 128             0               
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
