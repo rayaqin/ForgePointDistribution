@@ -6,7 +6,6 @@ A model a Forge of Empires játék egy gyakori problémáját hivatott megoldani
 </p>
 
 <h4>Egy GB-hez az alábbi adatok tartoznak:</h4>
-<i>(több GB is megadható, ez esetben a model elosztja a játékos FP-it optimálisan a GB-k között)</i>
 <br></br>
 <ol>
 <li>Hány FP szükséges a következő szint eléréséhez. </li>
